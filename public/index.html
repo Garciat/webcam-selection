@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Motion Detection</title>
+        <script src="build/main.js"></script>
+        
+        <style>
+            .webcam-display {
+                display: inline-block;
+                position: relative;
+                width: 960px;
+                height: 720px;
+            }
+                .webcam-display > video {
+                    position: absolute;
+                    top: 0; left: 0;
+                    width: 100%; height: 100%;
+                }
+            
+            .webcam-selection-game {
+                z-index: 1;
+                position: absolute;
+                top: 0; left: 0;
+                width: 100%; height: 100%;
+            }
+            
+            .game-prop {
+                position: absolute;
+            }
+            
+            .game-button {
+                width: 200px; height: 100px;
+                border-radius: 100%;
+            }
+            
+            #rojo {
+                background: red;
+            }
+        </style>
+    </head>
+    <body>
+        <template id="game-template">
+            <button data-id="0" data-x="600" data-y="500" class="game-prop game-button" id="rojo" onclick="alert('hi')">
+                INICIO
+            </button>
+            <button data-id="1" data-x="30" data-y="30" class="game-prop game-button" id="rojo" onclick="alert('hi')">
+                Hola mundo
+            </button>
+            <button data-id="2" data-x="250" data-y="30" class="game-prop game-button" id="rojo" onclick="alert('hi')">
+                Hola mundo
+            </button>
+            <button data-id="3" data-x="500" data-y="30" class="game-prop game-button" id="rojo" onclick="alert('hi')">
+                Hola mundo
+            </button>
+        </template>
+    </body>
+</html>
