@@ -1,0 +1,22 @@
+{
+  "name": "webcam-selection",
+  "version": "1.0.0",
+  "description": "hello",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Garciat/webcam-selection.git"
+  },
+  "author": "Gabriel Garcia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Garciat/webcam-selection/issues"
+  },
+  "homepage": "https://github.com/Garciat/webcam-selection#readme",
+  "scripts": {
+    "build": "tsd reinstall && tsc --p src"
+  },
+  "devDependencies": {
+    "tsd": "^0.5.7",
+    "typescript": "^1.5.0-beta"
+  }
+}
