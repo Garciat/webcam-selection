@@ -1,5 +1,9 @@
 /// <reference path="../typings/tsd.d.ts" />
 /// <reference path="../lib/UInt8ClampedArray.d.ts" />
+/// <reference path="../lib/ImageData.d.ts" />
+
+// https://github.com/Microsoft/TypeScript/issues/949
+const ImageDataFixed: ImageDataConstructor = <any> ImageData;
 
 module ArrayHelper {
     export function coerce<T>(obj: ArrayLike<T>): T[] {
@@ -141,7 +145,7 @@ class MotionDetector {
     }
     
     putDebugData(ctx: CanvasRenderingContext2D) {
-        var imageData = new ImageData(this.processed, this.canvas.width, this.canvas.height);
+        var imageData = new ImageDataFixed(this.processed, this.canvas.width, this.canvas.height);
         ctx.putImageData(imageData, 0, 0);
     }
 }
