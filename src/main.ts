@@ -1,4 +1,4 @@
-/// <reference path="../typings/tsd.d.ts" />
+/// <reference path="../typings/webrtc/MediaStream.d.ts" />
 /// <reference path="../lib/UInt8ClampedArray.d.ts" />
 /// <reference path="../lib/ImageData.d.ts" />
 
