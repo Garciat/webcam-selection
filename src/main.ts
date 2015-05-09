@@ -327,6 +327,7 @@ class SelectionGame {
         }
     }
     
+    // TODO fix!
     beginRound(sequence: number[]) {
         var waiting = false;
         
@@ -345,7 +346,7 @@ class SelectionGame {
                     waiting = false;
                     
                     if (sequence.length === 0) {
-                        this.onWon();
+                        // won
                     }
                 }, 1000);
             } else {
