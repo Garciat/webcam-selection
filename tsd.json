@@ -6,7 +6,10 @@
   "bundle": "typings/tsd.d.ts",
   "installed": {
     "webrtc/MediaStream.d.ts": {
-      "commit": "b3834d886a95789e6ab56e8244775ec10c5293d0"
+      "commit": "8f081073e6cb416f901b272810d8b04d6e01c9e0"
+    },
+    "es6-promise/es6-promise.d.ts": {
+      "commit": "8f081073e6cb416f901b272810d8b04d6e01c9e0"
     }
   }
 }

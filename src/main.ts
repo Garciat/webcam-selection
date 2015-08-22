@@ -185,12 +185,14 @@ class BoxCollisionDetector {
 class WebcamDisplay {
     private root: HTMLElement;
     private video: HTMLVideoElement;
+    private stream: MediaStream;
 
     onReady = () => {};
 
     constructor() {
         this.root = WebcamDisplay.createRoot();
         this.video = WebcamDisplay.createVideoElement(this.root);
+        this.stream = null;
     }
 
     start(parent: Element) {
@@ -210,8 +212,13 @@ class WebcamDisplay {
     getVideo() {
         return this.video;
     }
+    
+    stop() {
+        this.stream.stop();
+    }
 
     acceptStream = (stream: MediaStream) => {
+        this.stream = stream;
         this.video.src = URL.createObjectURL(stream);
         this.video.onloadedmetadata = this.handleStreamStart;
         this.video.play();
@@ -341,7 +348,7 @@ window.addEventListener('load', function () {
     webcam.start(document.body);
 
     webcam.onReady = () => {
-        var adapter = new WebcamSelectionAdapter(webcam, true, true);
+        var adapter = new WebcamSelectionAdapter(webcam, true);
         adapter.loadTemplate(template);
 
         adapter.onSelected = (source) =>
